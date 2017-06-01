@@ -6,7 +6,7 @@ w2 = nonword
 
 table = {}
 
-sherlock = open("sherlock1.txt", "rb")
+sherlock = open("corpus/sherlock.txt", "rb")
 
 for line in sherlock:
 	for word in line.split():
@@ -31,7 +31,7 @@ for i in xrange(maxwords):
 		output += newword + " "
 	w1, w2 = w2, newword
 
-outsherlock = open("output.txt", "wb")
+outsherlock = open("output/out-markov.txt", "wb")
 outsherlock.write(output)
 
 outsherlock.close()

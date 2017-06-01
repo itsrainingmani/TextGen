@@ -1,4 +1,4 @@
-import random, sys
+import random, sys, os
 
 nonword = "\n"
 w1 = nonword
@@ -6,7 +6,8 @@ w2 = nonword
 
 table = {}
 
-sherlock = open("corpus/sherlock.txt", "rb")
+filename = os.path.abspath("../corpus/sherlock.txt")
+sherlock = open(filename, "rb")
 
 for line in sherlock:
 	for word in line.split():
